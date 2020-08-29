@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Tag
 from .models import Door
 from .models import Group
+from .models import Phone
 
 
 
@@ -11,6 +12,7 @@ def home(request):
         'tags': Tag.objects.all(),
         'doors': Door.objects.all(),
         'groups': Group.objects.all(),
+        'phone' : Phone.objects.all(),
     }
     
     return render(request, 'tag/home.html', context)
