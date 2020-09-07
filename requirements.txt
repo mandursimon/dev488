@@ -4,6 +4,7 @@ autopy==4.0.0
 colorama==0.4.3
 Django==3.0.5
 gunicorn==20.0.4
+Channels==2.4.0
 image==1.5.32
 isort==4.3.21
 lazy-object-proxy==1.4.3
