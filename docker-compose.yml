@@ -5,8 +5,11 @@ services:
     build:
       context: "."
     image: building_access
-    container_name:  building_access
     volumes:
-      - ./:/var/dev/
+      - database:/app/files
     ports:
       - 8000:8000
+    restart: always
+
+volumes:
+  database:
