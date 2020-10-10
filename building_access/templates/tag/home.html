@@ -8,7 +8,7 @@
 <small class="text-muted">{{ tag.access_to_doors.all|join:", " }}</small> -->
 
 
-<style>
+<!--<style>
   table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -35,9 +35,75 @@
     </tr>
   </col>
     {% endfor %}
-  </table>
-  
-  
+  </table> -->
+
+  <div class="row content">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">{% for tag in tags %} {{ tag.uid }} {% endfor %}</p>
+          <a href="#" class="btn btn-primary">buy</a>
+        </div>
+      </div>
     </div>
+    
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">buy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">buy</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">buy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div></div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">buy</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">buy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
 </article>
 {% endblock content %}
