@@ -9,10 +9,10 @@ from .models import Phone
 
 def home(request):
     context = {
-        'tags': Tag.objects.all(),
-        'doors': Door.objects.all(),
-        'groups': Group.objects.all(),
-        'phone' : Phone.objects.all(),
+        #'tags': Tag.objects.all(),
+        #'doors': Door.objects.all(),
+        #'groups': Group.objects.all(),
+        #'phone' : Phone.objects.all(),
     }
     
     return render(request, 'tag/home.html', context)

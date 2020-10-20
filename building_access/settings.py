@@ -58,7 +58,6 @@ ASGI_APPLICATION = 'building_access.routing.application'
 ROOT_URLCONF = 'building_access.urls'
 
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -78,15 +77,47 @@ TEMPLATES = [
 WSGI_APPLICATION = 'building_access.wsgi.application'
 
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'users',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': '4r4Qkn8T'
+    },
+
+    'reviews': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'reviews',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': '4r4Qkn8T'
+    },
+
+    'orders': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'orders',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': '4r4Qkn8T'
+    },
+
+    'products': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'products',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': '4r4Qkn8T',
+    },
+
+
 }
 
 

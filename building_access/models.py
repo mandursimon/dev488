@@ -30,7 +30,7 @@ class Tag(models.Model):
 
     def __str__(self):
         return base64.b64encode(self.uid).decode('ascii')
-         
+
 
 class Phone(models.Model):
     phone = models.CharField(max_length=12, blank=False, editable=True)
