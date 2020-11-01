@@ -1,12 +1,10 @@
 from django.contrib import admin
-from .models import Tag
-from .models import Door
-from .models import Group
-from .models import Phone
+from .models import Contact, Orders, Products, Users, Reviews
 
 
 
-admin.site.register(Tag)
-admin.site.register(Door)
-admin.site.register(Group)
-admin.site.register(Phone)
+admin.site.register(Contact)
+admin.site.register(Orders)
+admin.site.register(Products)
+admin.site.register(Users)
+admin.site.register(Reviews)

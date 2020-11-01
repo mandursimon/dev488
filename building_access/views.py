@@ -1,9 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Tag
-from .models import Door
-from .models import Group
-from .models import Phone
+
 
 
 

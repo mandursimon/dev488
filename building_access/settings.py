@@ -82,6 +82,11 @@ WSGI_APPLICATION = 'building_access.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    
+    'users': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'users',
         'HOST': '127.0.0.1',
@@ -111,6 +116,15 @@ DATABASES = {
     'products': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'products',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': '4r4Qkn8T',
+    },
+
+    'contact': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'contact',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
