@@ -1,7 +1,7 @@
 
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
 import base64
 
 
@@ -31,25 +31,25 @@ class Products(models.Model):
  #       return self.quantity, self.price
 
 
-class Users(models.Model):
+class User(models.Model):
 
     uid = models.BinaryField(max_length=15, unique=True, editable=False)
     active = models.BooleanField(default=True)
-    note = models.CharField(blank=True, max_length=128)
-    username = models.CharField(max_length=128)
+    note = models.CharField(blank=True, max_length=45)
+    username = models.CharField(max_length=45)
     #owner = models.ForeignKey(User, on_delete=models.PROTECT)
     #access_to_doors = models.ManyToManyField(Products)
     #groups_member = models.ManyToManyField(Group)
 
     def __str__(self):
         return base64.b64encode(self.uid).decode('ascii')
-        return self.username
+        #return self.users_username
 
 
 class Reviews(models.Model):
     reviews_id = models.BinaryField(max_length=15, unique=True, editable=False)
     reviews_name = models.CharField(max_length=32)
-    username = models.ManyToManyField(Users)
+    #username = models.ManyToManyField(Users)
 
   #  def __str__(self):
    #     return self.reviews_id
