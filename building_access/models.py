@@ -10,28 +10,24 @@ class Contact(models.Model):
     phoneNo = models.CharField(max_length=128)
 
 
-class Orders(models.Model):
+class Order(models.Model):
     order_id = models.BinaryField(max_length=15, unique=True, editable=False)
-    quantity = models.CharField(max_length=45)
+    name = models.CharField(max_length=45)
     #note = models.CharField(blank=True, max_length=45)
 
 
-class Products(models.Model):
-    products_id = models.BinaryField(
-    max_length=15, unique=True, editable=False)
+class Product(models.Model):
+    product_id = models.BinaryField(max_length=15, unique=True, editable=False)
     quantity = models.CharField(max_length=32)
     price = models.CharField(max_length=32)
 
     #name = models.CharField(max_length=128, blank=True)
     #access_to_doors = models.ManyToManyField(Door, blank=True)
 
-    def __str__(self):
-       return self.quantity, self.price
 
-
-class Reviews(models.Model):
-    #reviews_id = models.ManyToManyField(max_length=15, unique=True, editable=False)
-    reviews_name = models.CharField(max_length=32)
+class Review(models.Model):
+    review_id = models.CharField(max_length=15)
+    review_name = models.CharField(max_length=32)
     #username = models.ManyToManyField(Users)
 
 

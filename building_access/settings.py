@@ -88,34 +88,34 @@ DATABASES = {
     
     'user': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'user',
+        'NAME': 'buidling_access',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
         'PASSWORD': '4r4Qkn8T'
     },
 
-    'reviews': {
+    'review': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'reviews',
+        'NAME': 'buidling_access',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
         'PASSWORD': '4r4Qkn8T'
     },
 
-    'orders': {
+    'order': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'orders',
+        'NAME': 'buidling_access',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
         'PASSWORD': '4r4Qkn8T'
     },
 
-    'products': {
+    'product': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'products',
+        'NAME': 'buidling_access',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
@@ -124,7 +124,7 @@ DATABASES = {
 
     'contact': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'contact',
+        'NAME': 'buidling_access',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
