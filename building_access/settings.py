@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
     
-    'user': {
+    'User': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'buidling_access',
         'HOST': '127.0.0.1',
@@ -95,7 +95,7 @@ DATABASES = {
         'PASSWORD': '4r4Qkn8T'
     },
 
-    'review': {
+    'Review': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'buidling_access',
         'HOST': '127.0.0.1',
@@ -104,7 +104,7 @@ DATABASES = {
         'PASSWORD': '4r4Qkn8T'
     },
 
-    'order': {
+    'Order': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'buidling_access',
         'HOST': '127.0.0.1',
@@ -113,7 +113,7 @@ DATABASES = {
         'PASSWORD': '4r4Qkn8T'
     },
 
-    'product': {
+    'Product': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'buidling_access',
         'HOST': '127.0.0.1',
@@ -122,7 +122,7 @@ DATABASES = {
         'PASSWORD': '4r4Qkn8T',
     },
 
-    'contact': {
+    'Contact': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'buidling_access',
         'HOST': '127.0.0.1',

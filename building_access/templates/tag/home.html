@@ -39,78 +39,50 @@
   </col>
     {% endfor %}
   </table> -->
+</div>
+  <div class="head1">
+  <div class="row content">
+    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+      <h2>Ton of text right here</h2>
+      <h3>Ton of text right here</h3>
+    </div>
+    <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
+      <p>
+        Ton of text right hereTon of text right hereTon of text right hereTon of text right hereTon of text right hereTon of text right hereTon of text right here
+      </p>
+      <ul>
+        <li><i class="ri-check-double-line"></i> Ton of text right here</li>
+        <li><i class="ri-check-double-line"></i> Ton of text right here</li>
+        <li><i class="ri-check-double-line"></i> Ton of text right here</li>
+      </ul>
+      <p class="font-italic">
+        Some shit
+      </p>
+    </div>
+  </div>
+</div>
 
-  <div class="container">
+
+{% for product in products %}
+<div class="content1" >
     <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <div class="card">
         <div class="card-body">
           <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
           <h5 class="card-title">Product</h5>
-          <p class="card-text">{% for tag in tag_uid %} {{ tag.uid }} {% endfor %}</p>
+          
+          <p class="card-text">{{ product.name }}</p>
+          
           <a href="#" class="btn btn-primary">buy</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
-            <h5 class="card-title">Product</h5>
-            <p class="card-text">{% for tag in tags %} {{ tag.uid }} {% endfor %}</p>
-            <a href="#" class="btn btn-primary">buy </a>
-          </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
-            <h5 class="card-title">Product</h5>
-            <p class="card-text">{% for tag in tags %} {{ tag.uid }} {% endfor %}</p>
-            <a href="#" class="btn btn-primary">buy</a>
-          </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
-            <h5 class="card-title">Product</h5>
-            <p class="card-text">{% for tag in tags %} {{ tag.uid }} {% endfor %}</p>
-            <a href="#" class="btn btn-primary">buy</a>
-          </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
-            <h5 class="card-title">Product</h5>
-            <p class="card-text">{% for tag in tags %} {{ tag.uid }} {% endfor %}</p>
-            <a href="#" class="btn btn-primary">buy</a>
-          </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
-            <h5 class="card-title">Product</h5>
-            <p class="card-text">{% for tag in tags %} {{ tag.uid }} {% endfor %}</p>
-            <a href="#" class="btn btn-primary">buy</a>
-          </div>
-        </div>
+        
       </div>
       
-    
+    </div>
 </div>
 </div>
+
+{% endfor %}
 <style>
     .card{
         margin-top: 1.5em;     

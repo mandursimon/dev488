@@ -11,15 +11,16 @@ class Contact(models.Model):
 
 
 class Order(models.Model):
-    order_id = models.BinaryField(max_length=15, unique=True, editable=False)
+    order_id = models.BinaryField(max_length=32, unique=True, editable=False)
     name = models.CharField(max_length=45)
     #note = models.CharField(blank=True, max_length=45)
 
 
 class Product(models.Model):
-    product_id = models.BinaryField(max_length=15, unique=True, editable=False)
+    name = models.CharField(max_length=40)
     quantity = models.CharField(max_length=32)
     price = models.CharField(max_length=32)
+
 
     #name = models.CharField(max_length=128, blank=True)
     #access_to_doors = models.ManyToManyField(Door, blank=True)
