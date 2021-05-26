@@ -1,125 +1,341 @@
-{% extends "tag/base.html" %}
+
 {% block content %}
 <head>
   <meta name="google-site-verification" content="VbvZDDqWN0u_14krSGUlZwMoTEmd1bbrQSu7Vlpwc5c" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+
+  
+
+
 </head>
 <article class="media content-section">
   <div class="media-body">
     <div class="article-metadata">
-      <!--<a class="mr-2" href="#">{{ tag.note }}</a>
-<a class="mr-2" href="#">{{ tag.active }}</a>
-<small class="text-muted">{{ tag.access_to_doors.all|join:", " }}</small> -->
+
+<body>
+	
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+		<div class="container">
+		  <a class="navbar-brand mr-4" href="/">Gradžus</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarToggle">
+		   <div class="navbar-nav mr-auto">
+			  <a class="nav-item nav-link" href="{% url ' -home' %}">Kontakt</a>
+			  <a class="nav-item nav-link" href="{% url 'tag-about' %}">Více&nbsp;Informací</a>
+			  <a class="nav-item nav-link" href="{% url 'tag-about' %}">Košík</a>
+			  <a class="nav-item nav-link" href="{% url 'tag-home' %}">Účet</a>
+			</div>
+			
+			<div class="navbar-nav">
+			  <a class="nav-item nav-link" href="#">Login</a>
+			  <a class="nav-item nav-link" href="#">Register</a>
+			</div>
+		  </div>
+		</div>
+	  </nav>
+
+</header>
 
 
-<!--<style>
-  table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  }
-  th, td {
-  padding: 4px;
-  text-align: left;
-  width: 60%;
-  }
-  </style>
-  <table tyle="width:1070px">
-    <tr>
-      <th>uid</th>
-      <th>note</th>
-      <th>doors</th>
-      <th>actions</th>
-    </tr>
-    {% for tag in tags %}
-    <tr>
-      <td>{{ tag.uid }}</td>
-      <td>{{ tag.note }}</td>
-      <td>{{ tag.access_to_doors.all|join:", " }}</td>
-      <td><a href="#">Edit&nbsp;</a><a href="#">Disable&nbsp;</a><a href="#">Log</a></td>
-    </tr>
-  </col>
-    {% endfor %}
-  </table> -->
+	
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+	<ol class="carousel-indicators">
+	  <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+	  <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+	  <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner">
+	  <div class="carousel-item active">
+		<img src="https://media.dumazahrada.cz/cache/7d/7a/7d7a736d261e53731d1e011deab065a3.jpg" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block">
+			{% for product in products %}
+		  <h5>{{ product.name }}</h5>
+		  {% endfor %}
+		  <p>Džus přímo z srdce Afriky</p>
+		  <button type="button" class="btn btn-primary">Koupit</button>
+		  <button type="button" class="btn btn-outline-primary">více informací</button>
+		</div>
+	  </div>
+	  <div class="carousel-item">
+		<img src="https://g.denik.cz/122/f5/granatove-jablko-duzina-detail_1293032074-jpg_denik-630.jpg" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block">
+		  <h5>{{ product.name }}</h5>
+		  <p>Čerstvý džus, </p>
+		  <button type="button" class="btn btn-outline-primary">více informací</button>
+		</div>
+	  </div>
+	  <div class="carousel-item">
+		<img src="https://media.sport.cz/images/top_foto1/0000002909990564/BXeMdsCi8LzSKblgb8QYGg/55967368e247f8ba8c890100-199330.jpg?20150703133506" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block">
+		  <h5>{{ product.name }}</h5>
+		  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+		  <button type="button" class="btn btn-outline-primary">více informací</button>
+		</div>
+	  </div>
+	</div>
+	<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Next</span>
+	</a>
+  </div>
+  {% endblock content %}
+  
 
-  <div class="container">
-    <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
-          <h5 class="card-title">Product</h5>
-          <p class="card-text">{% for tag in tag_uid %} {{ tag.uid }} {% endfor %}</p>
-          <a href="#" class="btn btn-primary">buy</a>
+  <div class="card" style="width: 18rem;">
+	<img src="..." class="card-img-top" alt="...">
+	<div class="card-body">
+	  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	</div>
+  </div>
+  
+
+  <div class="container my-5 justify-content-center">
+    <div class=" row justify-content-center ">
+        <div class="col-lg-6 col-12 mt-5 ">
+            <div class="card mt-3 ">
+                <div class="layer"></div>
+                <div class="content">
+                    <div class="card-header text-center border-0">
+                        <div class="row justify-content-center my-4">
+                            <div class="col">
+                                <div class="d-flex flex-lg-row flex-column-reverse no-gutters justify-content-center">
+                                    <div class="col-3 text-right"><img class="img-fluid" id="quotes" src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" width="110" height="110"></div>
+                                    <div class="col pr-lg-5"><img class=" img-1 mr-lg-5 " src="https://i.imgur.com/nUNhspp.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center pb-3 ">
+                        <div class="row justify-content-center">
+                            <div class="col text-center justify-content-center ">
+                                <p class="bold text-center px-md-3"> Growth of data is exponential and our ability to get true insight that matter was challenging with classic, traditional Bi tools. Vertix allow us to unserstand what is driving exceptions so we can take action Growth of data our ability to get true insight that matter was challenging with classic.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-auto mb-4">
+                    <div class="card-footer text-center border-0 mt-0 pt-0 mb-3">
+                        <div class="row text-center name mt-auto ">
+                            <div class="col">
+                                <h4 class="mb-0 Elizabeth">Sophia Smith</h4> <small class="mt-0 text-white">Hair Specialist</small>
+                                <p><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star-half-o text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="col-lg-6 col-12 mt-5 ">
+            <div class="card mt-3 ">
+                <div class="layer"></div>
+                <div class="content">
+                    <div class="card-header text-center border-0">
+                        <div class="row justify-content-center my-4">
+                            <div class="col">
+                                <div class="d-flex flex-lg-row flex-column-reverse no-gutters justify-content-center">
+                                    <div class="col-3 text-right"><img class="img-fluid" id="quotes" src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" width="110" height="110"></div>
+                                    <div class="col pr-lg-5"><img class=" img-1 mr-lg-5 " src="https://i.imgur.com/HjKTNkG.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center pb-3 ">
+                        <div class="row justify-content-center">
+                            <div class="col text-center justify-content-center ">
+                                <p class="bold text-center px-md-3"> Growth of data is exponential and our ability to get true insight that matter was challenging with classic, traditional Bi tools. Vertix allow us to unserstand what is driving exceptions so we can take action Growth of data our ability to get true insight that matter was challenging with classic.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-auto mb-4">
+                    <div class="card-footer text-center border-0 mt-0 pt-0 mb-3">
+                        <div class="row text-center name mt-auto ">
+                            <div class="col">
+                                <h4 class="mb-0 Elizabeth">SMike Housin</h4> <small class="mt-0 text-white">Director of Marketing</small>
+                                <p><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
-    <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
-            <h5 class="card-title">Product</h5>
-            <p class="card-text">{% for tag in tags %} {{ tag.uid }} {% endfor %}</p>
-            <a href="#" class="btn btn-primary">buy </a>
-          </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
-            <h5 class="card-title">Product</h5>
-            <p class="card-text">{% for tag in tags %} {{ tag.uid }} {% endfor %}</p>
-            <a href="#" class="btn btn-primary">buy</a>
-          </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
-            <h5 class="card-title">Product</h5>
-            <p class="card-text">{% for tag in tags %} {{ tag.uid }} {% endfor %}</p>
-            <a href="#" class="btn btn-primary">buy</a>
-          </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
-            <h5 class="card-title">Product</h5>
-            <p class="card-text">{% for tag in tags %} {{ tag.uid }} {% endfor %}</p>
-            <a href="#" class="btn btn-primary">buy</a>
-          </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class="test1" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" width='200px'>
-            <h5 class="card-title">Product</h5>
-            <p class="card-text">{% for tag in tags %} {{ tag.uid }} {% endfor %}</p>
-            <a href="#" class="btn btn-primary">buy</a>
-          </div>
-        </div>
-      </div>
-      
-    
-</div>
-</div>
+
 <style>
-    .card{
-        margin-top: 1.5em;     
-      
-          }
-</style>
-  
-  
-  
+.mb-2 {
+    margin-top: 600px;
+}
 
-</article>
-{% endblock content %}
+
+.carousel-item active {
+	max-height: 100px;
+	max-width: 120px;
+}
+.paragraph {
+    font-family: Montserrat,sans-serif;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Cormorant', serif;
+    background: #262626
+}
+
+.container-fluid {
+    margin-top: 200px !important
+}
+
+p {
+    font-size: 20px;
+    line-height: 33px !important;
+    color: #fff
+}
+
+.small {
+    letter-spacing: 0.5px !important
+}
+
+.card {
+    box-shadow: 0px 5px 16px rgba(223, 241, 223, 0.5);
+    transition: 0.8s;
+    background: #333;
+    ;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 7px !important
+}
+
+.card-header,
+.card-footer {
+    border-radius: 7px !important
+}
+
+.card:after {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    z-index: 9999;
+    height: 100%;
+    pointer-events: none
+}
+
+.card-title img {
+    z-index: 99999 !important
+}
+
+.card .layer {
+    position: absolute;
+    top: calc(100% - 5px);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#03a9f4, #e91ee3);
+    left: 0;
+    z-index: 1;
+    transition: 0.5s
+}
+
+.card:hover {
+    box-shadow: -5px 50px 100px rgba(223, 241, 223, 0.5)
+}
+
+.card:hover hr {
+    background-color: #fff
+}
+
+.card:hover h4 {
+    font-weight: 600
+}
+
+.card:hover p {
+    font-weight: 600
+}
+
+.card:hover small {
+    font-weight: 600
+}
+
+.card:hover .layer {
+    top: 0
+}
+
+.card .content {
+    position: relative;
+    z-index: 2
+}
+
+.card .content .img-1 {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white !important
+}
+
+.card h4 {
+    color: #fff;
+    font-weight: 500
+}
+
+hr {
+    background-color: rgb(117, 117, 117);
+    width: 80% !important;
+    transition: 1s
+}
+
+.bold {
+    font-weight: 500
+}
+
+#quotes {
+    opacity: 0.1;
+    filter: alpha(opacity=40)
+}
+
+@media (max-width: 479px) {
+    p {
+        padding: 0 !important
+    }
+
+    .img-1 {
+        margin-right: 0 !important
+    }
+}
+
+.navbar-nav {
+	margin-right: 800px;
+}
+
+.carousel-item {
+height: 30em;
+
+}
+
+</style>
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src ="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>

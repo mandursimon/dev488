@@ -82,49 +82,8 @@ WSGI_APPLICATION = 'building_access.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-    
-    'user': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'user',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': '4r4Qkn8T'
-    },
-
-    'reviews': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'reviews',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': '4r4Qkn8T'
-    },
-
-    'orders': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'orders',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': '4r4Qkn8T'
-    },
-
-    'products': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'products',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': '4r4Qkn8T',
-    },
-
-    'contact': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'contact',
+        'NAME': 'xyz',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
